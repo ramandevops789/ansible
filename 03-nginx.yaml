@@ -1,0 +1,8 @@
+- name: nginx install and run
+  hosts: web
+  become: yes # take sudo access
+  tasks:
+  - name: install nginx
+    ansiblt.builtin.package:
+      name: nginx
+      state: present
