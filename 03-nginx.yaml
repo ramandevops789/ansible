@@ -13,17 +13,17 @@
       state: started
       enabled: yes
 
-- name: snmp install and run
+- name: nodejs install and run
   hosts: web
   become: yes
   tasks:
-  - name: install snmp
+  - name: install nodejs:20
     ansible.builtin.package:
-      name: snmp
+      name: nodejs
       state: present
       
-  - name: run snmp
+  - name: run nodejs 
     ansible.builtin.service:
-      name: snmp
+      name: nodejs
       state: started
       enabled: yes
