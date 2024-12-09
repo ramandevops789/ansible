@@ -2,12 +2,12 @@
   hosts: web
   vars:
     COURSE: "DevOps with aws from PLAY level"
-  vars_files:
-  - vars.yaml
-  vars_prompt:
-  - name: COURSE
-    prompt: Please enter the COURSE name
-    private: false
+ # vars_files:
+ # - vars.yaml
+ # vars_prompt:
+ # - name: COURSE
+ #   prompt: Please enter the COURSE name
+ #   private: false
   tasks:
   - name: Print the information
     vars:
