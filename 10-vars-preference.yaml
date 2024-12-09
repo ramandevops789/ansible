@@ -1,7 +1,7 @@
 - name: variables to print
   hosts: web
-  vars:
-    COURSE: "DevOps with aws from PLAY level"
+ # vars:
+ #   COURSE: "DevOps with aws from PLAY level"
  # vars_files:
  # - vars.yaml
  # vars_prompt:
