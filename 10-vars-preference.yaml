@@ -9,7 +9,7 @@
     prompt: Please enter the COURSE name
     private: false
   tasks:
- # - name: Print the information
+  - name: Print the information
     vars:
    #   COURSE: "DevOps with AWS from Task level"
     ansible.builtin.debug:
