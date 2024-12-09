@@ -13,17 +13,17 @@
       state: started
       enabled: yes
 
-- name: mysql install and run
+- name: snmp install and run
   hosts: web
   become: yes
   tasks:
-  - name: install mysql
+  - name: install snmp
     ansible.builtin.package:
-      name: mysql
+      name: snmp
       state: present
       
-  - name: run mysql
+  - name: run snmp
     ansible.builtin.service:
-      name: mysql
+      name: snmp
       state: started
       enabled: yes
