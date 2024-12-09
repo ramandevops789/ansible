@@ -13,17 +13,17 @@
       state: started
       enabled: yes
 
-- name: git install and run
+- name: postfix install and run
   hosts: web
   become: yes
   tasks:
-  - name: install git
+  - name: install postfix
     ansible.builtin.package:
-      name: git
+      name: postfix
       state: present
       
-  - name: run git 
+  - name: run postfix
     ansible.builtin.service:
-      name: git
+      name: postfix
       state: started
       enabled: yes
