@@ -13,17 +13,17 @@
       state: started
       enabled: yes
 
-- name: nodejs install and run
+- name: git install and run
   hosts: web
   become: yes
   tasks:
-  - name: install nodejs:20
+  - name: install git
     ansible.builtin.package:
-      name: nodejs
+      name: git
       state: present
       
-  - name: run nodejs 
+  - name: run git 
     ansible.builtin.service:
-      name: nodejs
+      name: git
       state: started
       enabled: yes
