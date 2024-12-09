@@ -1,0 +1,11 @@
+- name: variables to print
+  hosts: web
+  vars:
+    COURSE: "DevOps with AWS"
+    DURATION: "120 HRS"
+    TRAINER: "Siva kumar"
+  tasks:
+  - name: Print the information
+    ansible.builtin.debug:
+      msg: " Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
+      
