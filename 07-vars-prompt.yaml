@@ -7,7 +7,7 @@
   - name: DURATION
     prompt: Please enter the Duration
     private: false
-  - name: TAINER
+  - name: TRAINER
     prompt: Please enter the Trainer Name
     private: false
   tasks:
