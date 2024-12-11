@@ -1,17 +1,17 @@
 - name: devops course information
   hosts: local
-  connection: ocl
+  connection: local
   vars:
     coure: "DevOps with AWS"
     duration: 120HRS
     topics:
     - Linux
     - Shell
-    - Asible
-    - Terrorm
+    - Ansible
+    - Terraform
     - AWS
     - K8
-  live: true
+    live: true
   tools: 
     ci: Jenckins
     cm: ansible
