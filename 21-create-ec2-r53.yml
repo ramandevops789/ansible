@@ -8,7 +8,7 @@
     instances:
     - mysql
     - backend
-    - forntend
+    - frontend
     zone: devopsaws.online
   tasks:
   - name: ansible to install boto3 and botocore
