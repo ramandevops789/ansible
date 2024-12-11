@@ -1,0 +1,21 @@
+- name: Creatae Ec2 and R53 records
+  hosts: local
+  connection: local
+  vars:
+    subnet_id: "subnet-04dc146fafea01953"
+    sg_id: "sg-0a458196d1bd1eb6b"
+    ami_id: "ami-09c813fb71547fc4f"
+    instances:
+    - mysql
+    - backend
+    - forntend
+  tasks:
+  - name: Create Ec2 Instance
+    amazon.aws.ec2_instance:
+      name: "{{ item }}"
+      vpc_subnet_id: "{{ subnet_id }}"
+      instance_type: "t3.micro"
+      security_group: "{{ sg_id }}"
+      image_id: "{{ ami_id }}"
+    loop: "{{ instances }}"
+    register: ec2_instances
