@@ -1,0 +1,25 @@
+- name: devops course information
+  hosts: local
+  connection: ocl
+  vars:
+    coure: "DevOps with AWS"
+    duration: 120HRS
+    topics:
+    - Linux
+    - Shell
+    - Asible
+    - Terrorm
+    - AWS
+    - K8
+  live: true
+  tools: 
+    ci: Jenckins
+    cm: ansible
+    cloud: aws
+    aws:
+    - IAM
+    - S3
+  tasks:
+  - name: print the course information
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{ course}}, topics are: {{ topics }}, and live: {{ live }}, tools are: {{ tools }}"
